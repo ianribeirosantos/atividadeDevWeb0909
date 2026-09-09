@@ -1,0 +1,84 @@
+<h2>Cadastrar Álbum</h2>
+
+<form action="/albuns" method="POST">
+
+    <label for="titulo">
+        Título:
+    </label>
+
+    <input
+        type="text"
+        id="titulo"
+        name="titulo"
+        required
+    >
+
+
+    <label for="anoLancamento">
+        Ano de lançamento:
+    </label>
+
+    <input
+        type="number"
+        id="anoLancamento"
+        name="anoLancamento"
+        required
+    >
+
+
+    <label for="artistaId">
+        Artista:
+    </label>
+
+    <select
+        id="artistaId"
+        name="artistaId"
+        required
+    >
+
+        <option value="">
+            Selecione um artista
+        </option>
+
+        {{#each artistas}}
+
+            <option value="{{id}}">
+                {{nome}}
+            </option>
+
+        {{/each}}
+
+    </select>
+
+
+    <div class="generos">
+
+        <h3>Gêneros</h3>
+
+        {{#each generos}}
+
+            <div class="genero-item">
+
+                <input
+                    type="checkbox"
+                    id="genero{{id}}"
+                    name="generos"
+                    value="{{id}}"
+                >
+
+                <label for="genero{{id}}">
+                    {{nome}}
+                </label>
+
+            </div>
+
+        {{/each}}
+
+    </div>
+
+
+    <button type="submit">
+        Cadastrar
+    </button>
+
+</form>

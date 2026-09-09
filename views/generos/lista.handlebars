@@ -1,0 +1,31 @@
+<h2>Gêneros</h2>
+
+<a href="/generos/cadastro">
+    Cadastrar gênero
+</a>
+
+<br><br>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {{#each generos}}
+
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nome}}</td>
+        </tr>
+
+        {{/each}}
+
+    </tbody>
+
+</table>

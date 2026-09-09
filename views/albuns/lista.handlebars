@@ -1,0 +1,62 @@
+<h2>Álbuns</h2>
+
+<a href="/albuns/cadastro">
+    Cadastrar álbum
+</a>
+
+<br>
+<br>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Ano</th>
+            <th>Artista</th>
+            <th>Gêneros</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {{#each albuns}}
+
+            <tr>
+
+                <td>
+                    {{id}}
+                </td>
+
+                <td>
+                    {{titulo}}
+                </td>
+
+                <td>
+                    {{anoLancamento}}
+                </td>
+
+                <td>
+                    {{artista.nome}}
+                </td>
+
+                <td>
+
+                    {{#each generos}}
+
+                        {{nome}}
+
+                        {{#unless @last}}, {{/unless}}
+
+                    {{/each}}
+
+                </td>
+
+            </tr>
+
+        {{/each}}
+
+    </tbody>
+
+</table>

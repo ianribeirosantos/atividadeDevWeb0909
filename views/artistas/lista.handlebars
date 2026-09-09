@@ -1,0 +1,29 @@
+<h2>Artistas</h2>
+
+<a href="/artistas/cadastro">
+    Cadastrar artista
+</a>
+
+<br><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>País</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each artistas}}
+
+        <tr>
+            <td>{{id}}</td>
+            <td>{{nome}}</td>
+            <td>{{pais}}</td>
+        </tr>
+
+        {{/each}}
+    </tbody>
+</table>
